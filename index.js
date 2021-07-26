@@ -9,6 +9,7 @@ const db = admin.firestore();
 process.env.DEBUG = 'dialogflow:debug'; // enables lib debugging statements
 
 exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, response) => {
+    response.send("WORKING");
     const agent = new WebhookClient({ request, response });
 
     function getNameHandler(agent) {
